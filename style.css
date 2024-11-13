@@ -1,0 +1,164 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+    font-family: 'DM sans', sans-serif;
+    margin-top: 50px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: hsl(33, 100%, 98%);
+}
+
+.expense-chart {
+    width: 450px;
+}
+
+.expense-chart header {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(10, 79%, 65%);
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+header span {
+    color:hsl(27, 66%, 92%);
+}
+
+header h1 {
+    color: #fff;
+}
+
+.expense-chart .body {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.body .week-expenses .title{
+    font-size: 180%;
+    color: hsl(25, 47%, 15%);
+    margin-bottom: 20px;
+}
+
+.bar-chart {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    gap: 20px;
+}
+
+.bar-chart .chart-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.chart-contents .bar {
+    background-color: hsl(10, 79%, 65%);
+    height: 100px;
+    width: 40px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.chart-contents .amount {
+    width: 0;
+    height: 0;
+    position: absolute;
+    overflow: hidden;
+    font-size: 14px;
+    top: -30px;
+}
+
+.bar:hover .amount {
+    width: auto;
+    height: auto;
+    background-color: hsl(25, 47%, 15%);
+    color: #fff;
+    padding: 3.5px;
+    border-radius: 5px;
+}
+
+.chart-contents:nth-of-type(3) .bar {
+    background-color: hsl(186, 34%, 60%);
+}
+
+.chart-contents .bar:hover {
+    background-color: hsla(10, 79%, 65%, 0.701);
+}
+
+.chart-contents:nth-of-type(3) .bar:hover {
+    background-color: hsla(186, 34%, 60%, 0.703);
+}
+
+.chart-contents .day {
+    color: hsl(28, 10%, 53%);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.footer .this-month {
+    display: flex;
+    flex-direction: column;
+}
+
+.this-month span {
+    color: hsl(28, 10%, 53%);
+}
+
+.this-month h1 {
+    color: hsl(25, 47%, 15%);
+    font-size: 230%;
+}
+
+.footer .percent {
+    text-align: right;
+}
+
+.footer .percent h3 {
+    color: hsl(25, 47%, 15%);
+    font-size: 100%;
+}
+
+.footer .percent span {
+    color: hsl(28, 10%, 53%);
+}
+
+
+@media (max-width: 400px) {
+    .expense-chart{
+        width: 400px;
+        padding-top: 30px;
+    }
+
+    .chart-contents .bar {
+        width: 25px;
+    }
+    .week-expenses {
+       text-align: center;
+    }
+    .bar-chart {
+        padding: 10px;
+    }
+}
